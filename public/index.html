@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="" <title>Faithy Car Listing</title>
+    <link rel="stylesheet" type="text/css" href="\styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">
+                <h1> Faithy Car Listing</h1>
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+    <section id="display">
+        <div class="container">
+            <h1> Best Of Toyota Cars</h1>
+            <p>Are you looking for the best of Toyota cars? <br> </p>
+            <p> Look no further, we have all that you desire.</p>
+            <p><img src="./img/toyota 1.webp" width="200" height="162" alt="Toyota your choice car"></p>
+            <br>
+            <p><img src="" </p>
+        </div>
+    </section>
+    <form>
+        <fieldset>
+            <legend>Please fill out this form </legend>
+            <p>Brand</p>
+            <input type="text" name="" id="brand" placeholder="Brand"> <br>
+            <p>Select Toyota Model</p>
+            <select name="Toyota">
+              <option value="prius"> prius</option>
+              <option value="tacoma"><tacoma/option>
+              <option value="yaris">yaris</option>
+              <option value="camry">camry</option>
+              <option value="cruiser">cruiser</option>
+              <option value="sienna">aienna</option>
+              <option value="rav 4">rav 4</option>
+              <option value="tundra">tundra</option>
+            </select>
+            <p>name</p>
+            <input type="text" id='name' name="" placeholder="Enter Fullname"> <br>
+            <p>telephone</p>
+            <input type="tel" id='telephone' name="" placeholder="Enter phone number"><br>
+            <p>email</p>
+            <input type="text" id='email' name="" placeholder="Enter email"><br>
+            <p></p>
+            <p>price</p>
+            <input type="text" id='price' name="" placeholder="Max Price"><br>
+            <p>color</p>
+            <input type="password" id='color' name="" placeholder="Enter color"><br>
+            <input type="submit" name="Login" id='password' value="Login">
+        </fieldset>
+    </form>
+    <script src=" \jquery-3.4.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('form').on('submit', function(e) {
+                e.preventDefault();
+                let brand = $('#brand').val();
+                let name = $('#name').val();
+                let telephone = $('#telephone').val();
+                let email = $('#email').val();
+                let price = $('#price').val();
+                let color = $('#color').val();
+                let password = $('#password').val();
+                console.log(brand)
+                console.log(name)
+                console.log(telephone)
+                console.log(email)
+                $.ajax({
+                    url: "http://localhost:3000/cars",
+                    success: function(result) {
+                        // $("#div1").html(result);
+                        console.log(result)
+                    },
+                    method: "POST",
+                    data: {
+                        name,
+                        telephone,
+                        email,
+                        price,
+                        color,
+                        password
+                    }
+                });
+            })
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,14 +1,40 @@
 {
-    "posts": [{
-            "id": 1,
-            "name": " ",
-            "phone-number": " ",
-            "email": " ",
-            " model": " ",
-            "year": " ",
-            "condition": " ",
-            "transmission-type": " "
-        }
-
-    ]
+  "cars": [
+    {
+      "id": 1,
+      "name": " ",
+      "Telephone": " ",
+      "email": " ",
+      " price": " ",
+      "color": " ",
+      "password": " "
+    },
+    {
+      "name": "gtyhuh",
+      "telephone": "08025478956",
+      "email": "hyt@b.jhdv.com",
+      "price": "25",
+      "color": "hvftfguk",
+      "password": "Login",
+      "id": 2
+    },
+    {
+      "name": "gtyhuh",
+      "telephone": "08025478956",
+      "email": "hyt@b.jhdv.com",
+      "price": "25",
+      "color": "hvftfguk",
+      "password": "Login",
+      "id": 3
+    },
+    {
+      "name": "gty",
+      "telephone": "08025478956",
+      "email": "ajhjaf@gjdh.com",
+      "price": "25",
+      "color": "",
+      "password": "Login",
+      "id": 4
+    }
+  ]
 }
